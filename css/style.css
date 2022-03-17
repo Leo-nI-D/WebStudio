@@ -244,6 +244,8 @@ ol {
 .team {
   margin-top: 94px;
   margin-bottom: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
   background: #f5f4fa; }
   .team h2 {
     font-family: "Roboto", sans-serif;
