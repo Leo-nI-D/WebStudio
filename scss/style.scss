@@ -1,0 +1,364 @@
+// GLOBAL
+$accentcolor: #2196f3;
+$darktext: #212121;
+$graycolor: #757575;
+@mixin btn {
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  border: 0;
+  cursor: pointer;
+}
+@mixin sec-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $darktext;
+  margin-bottom: 50px;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: $darktext;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: $accentcolor;
+}
+
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.container_row {
+  display: flex;
+  align-items: center;
+}
+// HEADER
+.logo {
+  font-family: "Raleway";
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+  color: #000;
+  .logo_dark {
+    color: #fff;
+  }
+
+  .logo__accent {
+    color: $accentcolor;
+  }
+}
+
+.menu {
+  margin-left: 93px;
+}
+
+.menu__list {
+  display: flex;
+}
+
+.menu__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.menu__link {
+  display: block;
+  padding: 31px 0;
+  position: relative;
+}
+
+.menu__link_active {
+  color: $darktext;
+}
+
+.menu__link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: $darktext;
+  border-radius: 2px;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s;
+  opacity: 0;
+}
+
+.menu__link:hover::after,
+.menu__link_active:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+  background-color: $accentcolor;
+}
+
+.header__info {
+  margin-left: auto;
+}
+
+.header__info > a:first-child {
+  margin-right: 30px;
+}
+
+.header__email::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 12px;
+  background: url("../img/header__email.svg") center/cover no-repeat;
+  margin-right: 10px;
+}
+
+.header__phone::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 16px;
+  background: url("../img/smartphone.svg") center/cover no-repeat;
+  margin-right: 10px;
+}
+// MAIN
+// HERO
+.hero {
+  background: url("../img/hero-bg.jpg") center/cover no-repeat;
+  padding: 200px 0;
+  text-align: center;
+  &__title {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 60px;
+    max-width: 696px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 auto;
+  }
+}
+.btn {
+  @include btn();
+  margin-top: 30px;
+  padding: 10px 24px;
+  &:hover {
+    background-color: #1871e6;
+  }
+}
+// SOFT-SKILS
+.soft-skils {
+  margin-top: 94px;
+  margin-bottom: 94px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .soft-menu {
+    display: flex;
+    .wrapper {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    .img-bg {
+      background: #f5f4fa;
+      border-radius: 4px;
+      max-width: 270px;
+    }
+    img {
+      padding: 25px 100px;
+    }
+    h3 {
+      font-family: "Roboto", sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      max-width: 270px;
+      color: $darktext;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.03em;
+      max-width: 270px;
+      color: $graycolor;
+    }
+  }
+}
+// WHAT-WE-DO
+.what-we-do {
+  position: relative;
+  h2 {
+    @include sec-title();
+  }
+  .card-menu {
+    display: flex;
+
+    .card-item {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+  p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    background: rgba(47, 48, 58, 0.8);
+    padding: 27px 0;
+    max-width: 370px;
+    width: 370px;
+    position: absolute;
+    bottom: 5px;
+  }
+}
+// TEAM
+.team {
+  margin-top: 94px;
+  margin-bottom: 94px;
+  background: #f5f4fa;
+  h2 {
+    @include sec-title();
+  }
+
+  .Team-people {
+    width: 270px;
+    height: 260px;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .social {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+.team-list {
+  display: flex;
+  text-align: center;
+  .team-item {
+    margin-left: 15px;
+    margin-right: 15px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    h3 {
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.03em;
+      color: $darktext;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.03em;
+      color: $graycolor;
+      margin-bottom: 16px;
+    }
+  }
+}
+// .soc-link {
+//   &::after {
+//     content: "";
+//     display: block;
+//     background: $accentcolor;
+//     border-radius: 50%;
+//     width: 44px;
+//     height: 44px;
+//     padding: 12px;
+//   }
+// }
+
+// CLIENTS
+.clients {
+  margin-bottom: 94px;
+  h2 {
+    @include sec-title();
+  }
+  .clients-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    .clients-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #afb1b8;
+      border-radius: 4px;
+      max-width: 170px;
+      width: 170px;
+      max-height: 92px;
+      height: 92px;
+      &:hover{
+        border-color: $accentcolor;
+      }
+    }
+  }
+  svg {
+    fill: #afb1b8;
+    &:hover {
+      fill: $accentcolor;
+    }
+  }
+}

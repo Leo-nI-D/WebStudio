@@ -1,0 +1,344 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #212121; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+a:hover {
+  color: #2196f3; }
+
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0; }
+
+ul,
+ol {
+  list-style: none; }
+
+.wrapper {
+  position: relative;
+  overflow: hidden; }
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto; }
+
+.container_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.logo {
+  font-family: "Raleway";
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+  color: #000; }
+  .logo .logo_dark {
+    color: #fff; }
+  .logo .logo__accent {
+    color: #2196f3; }
+
+.menu {
+  margin-left: 93px; }
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.menu__item:not(:last-child) {
+  margin-right: 50px; }
+
+.menu__link {
+  display: block;
+  padding: 31px 0;
+  position: relative; }
+
+.menu__link_active {
+  color: #212121; }
+
+.menu__link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #212121;
+  border-radius: 2px;
+  position: absolute;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+  opacity: 0; }
+
+.menu__link:hover::after,
+.menu__link_active:hover::after {
+  opacity: 1;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  background-color: #2196f3; }
+
+.header__info {
+  margin-left: auto; }
+
+.header__info > a:first-child {
+  margin-right: 30px; }
+
+.header__email::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 12px;
+  background: url("../img/header__email.svg") center/cover no-repeat;
+  margin-right: 10px; }
+
+.header__phone::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 16px;
+  background: url("../img/smartphone.svg") center/cover no-repeat;
+  margin-right: 10px; }
+
+.hero {
+  background: url("../img/hero-bg.jpg") center/cover no-repeat;
+  padding: 200px 0;
+  text-align: center; }
+  .hero__title {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 60px;
+    max-width: 696px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 auto; }
+
+.btn {
+  background: #2196f3;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  border: 0;
+  cursor: pointer;
+  margin-top: 30px;
+  padding: 10px 24px; }
+  .btn:hover {
+    background-color: #1871e6; }
+
+.soft-skils {
+  margin-top: 94px;
+  margin-bottom: 94px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .soft-skils .soft-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .soft-skils .soft-menu .wrapper {
+      margin-left: 15px;
+      margin-right: 15px; }
+    .soft-skils .soft-menu .img-bg {
+      background: #f5f4fa;
+      border-radius: 4px;
+      max-width: 270px; }
+    .soft-skils .soft-menu img {
+      padding: 25px 100px; }
+    .soft-skils .soft-menu h3 {
+      font-family: "Roboto", sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      max-width: 270px;
+      color: #212121;
+      margin-top: 30px;
+      margin-bottom: 10px; }
+    .soft-skils .soft-menu p {
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.03em;
+      max-width: 270px;
+      color: #757575; }
+
+.what-we-do {
+  position: relative; }
+  .what-we-do h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    margin-bottom: 50px; }
+  .what-we-do .card-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .what-we-do .card-menu .card-item {
+      margin-left: 15px;
+      margin-right: 15px; }
+  .what-we-do p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    background: rgba(47, 48, 58, 0.8);
+    padding: 27px 0;
+    max-width: 370px;
+    width: 370px;
+    position: absolute;
+    bottom: 5px; }
+
+.team {
+  margin-top: 94px;
+  margin-bottom: 94px;
+  background: #f5f4fa; }
+  .team h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    margin-bottom: 50px; }
+  .team .Team-people {
+    width: 270px;
+    height: 260px;
+    max-width: 100%;
+    max-height: 100%; }
+  .team .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
+.team-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center; }
+  .team-list .team-item {
+    margin-left: 15px;
+    margin-right: 15px;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px; }
+    .team-list .team-item h3 {
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.03em;
+      color: #212121;
+      margin-top: 30px;
+      margin-bottom: 10px; }
+    .team-list .team-item p {
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.03em;
+      color: #757575;
+      margin-bottom: 16px; }
+
+.clients {
+  margin-bottom: 94px; }
+  .clients h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    margin-bottom: 50px; }
+  .clients .clients-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly; }
+    .clients .clients-list .clients-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      border: 1px solid #afb1b8;
+      border-radius: 4px;
+      max-width: 170px;
+      width: 170px;
+      max-height: 92px;
+      height: 92px; }
+      .clients .clients-list .clients-item:hover {
+        border-color: #2196f3; }
+  .clients svg {
+    fill: #afb1b8; }
+    .clients svg:hover {
+      fill: #2196f3; }
